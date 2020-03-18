@@ -119,6 +119,10 @@ $---------------------------------------------------------------> include-before
 $for(include-before)$
 $include-before$
 $endfor$
+$--------------------------------------------------------------------> Wiki Root
+<div style="text-align: center; font-size: 11px; letter-spacing: 2px;">
+<a href="$root_path$index.html">Wiki Root</a>
+</div>
 $-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> IF: title
 $if(title)$
 <header>
@@ -145,10 +149,6 @@ $-------------------------------------------------------------------------------
 </header>
 $endif$
 $--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< END IF: title
-$--------------------------------------------------------------------> Wiki Root
-<div style="text-align: center">
-<a href="$root_path$index.html">Wiki Root</a>
-</div>
 $--------------------------------------------------------------------------> toc
 $if(toc)$
 <hr>
@@ -167,7 +167,7 @@ $endfor$
 $--------------------------------------------------------------------> Wiki Root
 <hr>
 <div>
-<div style="text-align: center">
+<div style="text-align: center; font-size: 11px; letter-spacing: 2px;">
 <a href="$root_path$index.html">Wiki Root</a>
 </div>
 </div>
