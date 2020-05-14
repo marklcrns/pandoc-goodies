@@ -120,8 +120,13 @@ $for(include-before)$
 $include-before$
 $endfor$
 $--------------------------------------------------------------------> Wiki Root
-<div style="text-align: center; font-size: 11px; letter-spacing: 2px;">
+<div style="text-align: center; position: -webkit-sticky-; position: sticky;
+top: 0; z-index: 9999; padding-top: 10px; background-color: rgba(255, 255, 255, .8)">
+<div style="font-size: 12px; letter-spacing: 2px;">
 <a href="$root_path$index.html">Wiki Root</a>
+</div>
+<div style="text-align: center; font-size: 11px; letter-spacing: 1px;">
+<a href="../index.html">index</a>
 </div>
 $-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> IF: title
 $if(title)$
@@ -131,6 +136,7 @@ $---------------------------------------------------------------------> subtitle
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
+</div>
 $-----------------------------------------------------------------------> author
 $for(author)$
 <p class="author">$author$</p>
@@ -153,7 +159,7 @@ $--------------------------------------------------------------------------> toc
 $if(toc)$
 <hr>
 <nav id="$idprefix$TOC">
-<h1 class="toc-title">$if(toc-title)$$toc-title$$else$Contents$endif$</h1>
+<h2 class="toc-title">$if(toc-title)$$toc-title$$else$Contents$endif$</h1>
 $table-of-contents$
 </nav>
 <hr>
@@ -164,13 +170,7 @@ $----------------------------------------------------------------> include-after
 $for(include-after)$
 $include-after$
 $endfor$
-$--------------------------------------------------------------------> Wiki Root
 <hr>
-<div>
-<div style="text-align: center; font-size: 11px; letter-spacing: 2px;">
-<a href="$root_path$index.html">Wiki Root</a>
-</div>
-</div>
 </article>
 </body>
 </html>
