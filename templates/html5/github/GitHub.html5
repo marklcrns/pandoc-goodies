@@ -113,23 +113,38 @@ $for(header-includes)$
 $endfor$
 $-------------------------------------------------------------------------------
 </head>
-<body>
+<body style="
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+">
 <article class="markdown-body">
 $---------------------------------------------------------------> include-before
 $for(include-before)$
 $include-before$
 $endfor$
 $--------------------------------------------------------------------> Wiki Root
-<div style="text-align: center; position: -webkit-sticky-; position: sticky;
-top: 0; z-index: 9999; padding-top: 10px; background-color: rgba(255, 255, 255, .8)">
-<div style="font-size: 12px; letter-spacing: 2px;">
+<div style="
+text-align:center;
+position: -webkit-sticky-;
+position: sticky;
+top: 0;
+z-index: 9999;
+padding-top: 10px;
+background-color: rgba(255, 255, 255, .8)">
+<div style="
+font-size: clamp(8px, 1vw, 15px);
+letter-spacing: 2px;">
 <a href="$root_path$index.html">Wiki Root</a> | 
 <a href="../index.html">index</a>
 </div>
 $-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> IF: title
 $if(title)$
 <header>
-<h1 class="title$if(subtitle)$ followed-by-subtitle$endif$">$title$</h1>
+<h1 class="title$if(subtitle)$ followed-by-subtitle$endif$" style="
+font-size: clamp(1rem, 3vw, 2rem);
+">$title$</h1>
 $---------------------------------------------------------------------> subtitle
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
